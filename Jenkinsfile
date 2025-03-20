@@ -38,7 +38,7 @@ pipeline{
         }
         stage('push to dockerhub'){
             steps{
-                sh 'echo "Mahi@2001"|docker login -u maheshgowdamg25 --password-stdin'
+                sh 'echo ""|docker login -u maheshgowdamg25 --password-stdin'
                 sh 'docker push maheshgowdamg25/spring:latest'
             }
         }
