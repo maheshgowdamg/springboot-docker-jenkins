@@ -6,7 +6,7 @@ pipeline{
     stages{
         stage('pull src'){
             steps{
-                git branch:'main',url:''
+                git branch: 'main', url: 'https://github.com/maheshgowdamg/springboot-docker-jenkins.git'
             }
         }
         stage('build'){
