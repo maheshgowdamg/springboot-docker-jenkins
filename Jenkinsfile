@@ -16,13 +16,13 @@ pipeline{
         }
         stage('remove conatiner'){
             steps{
-                sh 'docker rm -f (docker ps -a -q)'
+                sh 'docker rm -f $(docker ps -a -q)'
                 sh 'docker container prune -f'
             }
         }
         stage('remove images'){
             steps{
-                sh 'docker rmi -f (docker images -q)'
+                sh 'docker rmi -f $(docker images -q)'
             
             }
         }
